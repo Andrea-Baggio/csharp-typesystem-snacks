@@ -150,20 +150,17 @@
 //quando la somma degli elementi è minore di 50.
 
 int[] myArray = new int[0];
-int result = 0;
 int sum = 0;
 
 
-while (result < 49)
+while (sum < 49)
 {
     Console.Write("Inserisci un numero: ");
     int num = int.Parse(Console.ReadLine());
+
+    Array.Resize(ref myArray, myArray.Length + 1);
+    myArray[myArray.Length - 1] = num;
     sum += num;
-
-    result = sum % 50;
-
-    //Array.Resize(ref myArray, myArray.Length + 1);
-    //myArray[myArray.Length - 1] = num;
 }
 
 Console.WriteLine("Hai raggiunto il valore 49!");
