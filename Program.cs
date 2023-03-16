@@ -84,33 +84,61 @@
 
 //----------------------------------------------------------------
 
-string[] invitati = { "Nick Carraway", "Jay Gatsby", "Daisy Buchanan", "Tom Buchanan", "Jordan Baker", "Myrtle Wilson" };
+//string[] invitati = { "nick ncarraway", "jay gatsby", "daisy buchanan", "tom buchanan", "jordan baker", "myrtle wilson" };
 
-Console.Write("Inserisci il tuo nome: ");
-string name = Console.ReadLine();
+//Console.Write("Inserisci il tuo nome: ");
+//string name = Console.ReadLine().ToLower();
 
-bool guest = false;
+//bool guest = false;
 
-for (int i = 0; i < invitati.Length; i++)
-{
-    if (invitati.Contains(name))
-    {
-        guest = true;
-        break;
-    }
-}
+//for (int i = 0; i < invitati.Length; i++)
+//{
+//    if (invitati.Contains(name))
+//    {
+//        guest = true;
+//        break;
+//    }
+//}
 
-if (guest)
-{
-    Console.WriteLine("Sei stato invitato alla festa del Grande Gatsby!");
-}
-else
-{
-    Console.WriteLine("Mi dispiace, il tuo nome non è presente nell'elenco degli invitati.");
-}
+//if (guest)
+//{
+//    Console.WriteLine("Sei stato invitato alla festa del Grande Gatsby!");
+//}
+//else
+//{
+//    Console.WriteLine("Mi dispiace, il tuo nome non è presente nell'elenco degli invitati.");
+//}
 
 //----------------------------------------------------------------
 
+//int[] myArray = new int[0];
 
+//for (var i = 0; i < 6; i++)
+//{
+//    Console.Write("Inserisci un numero: ");
+//    int num = Convert.ToInt32(Console.ReadLine());
+//    if (num % 2 != 0)
+//    {
+//        Array.Resize(ref myArray, myArray.Length + 1);
+//        myArray[myArray.Length - 1] = num;
+//    }
+//}
 
+//Console.WriteLine("Numeri dispari inseriti: ");
+//foreach (int element in myArray)
+//{
+//    Console.WriteLine(element);
+//}
 
+//----------------------------------------------------------------
+
+int[] myArray = new int[] { 2, 5, 3, 14, 12, 7, 29, 1 };
+int sum = 0;
+
+for (int i = 1; i < myArray.Length; i += 2)
+{
+    Console.WriteLine(myArray[i]);
+    sum += myArray[i];
+}
+
+Console.WriteLine("La somma: " + sum);
