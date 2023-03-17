@@ -145,22 +145,30 @@
 
 //----------------------------------------------------------------
 
-//Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.
-//Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a
-//quando la somma degli elementi è minore di 50.
-
-int[] myArray = new int[0];
-int sum = 0;
+//int[] myArray = new int[0];
+//int sum = 0;
 
 
-while (sum < 49)
+//while (sum < 49)
+//{
+//    Console.Write("Inserisci un numero: ");
+//    int num = int.Parse(Console.ReadLine());
+
+//    Array.Resize(ref myArray, myArray.Length + 1);
+//    myArray[myArray.Length - 1] = num;
+//    sum += num;
+//}
+
+//Console.WriteLine("Hai raggiunto il valore 49!");
+
+//----------------------------------------------------------------
+
+Console.Write("Inserisci un numero: ");
+int n = int.Parse(Console.ReadLine());
+
+for (int i = 0; i < n; i++)
 {
-    Console.Write("Inserisci un numero: ");
-    int num = int.Parse(Console.ReadLine());
-
-    Array.Resize(ref myArray, myArray.Length + 1);
-    myArray[myArray.Length - 1] = num;
-    sum += num;
+    int[] myArray = new int[n];
+    Console.WriteLine(myArray[i]);
 }
 
-Console.WriteLine("Hai raggiunto il valore 49!");
