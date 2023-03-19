@@ -163,24 +163,46 @@
 
 //----------------------------------------------------------------
 
-Console.Write("Inserisci un numero: ");
-int n = int.Parse(Console.ReadLine());
+//Console.Write("Inserisci un numero: ");
+//int n = int.Parse(Console.ReadLine());
 
-Random rnd = new Random();
+//Random rnd = new Random(42);
 
-for (int i = 0; i < n; i++)
+//for (int i = 0; i < n; i++)
+//{
+//    int[] myArray = new int[10];
+
+//    for (int j = 0; j < myArray.Length; j++)
+//    {
+//        myArray[j] = rnd.Next(1, 101);
+//    }
+
+//    Console.WriteLine(string.Join(", ", myArray));
+//}
+
+//----------------------------------------------------------------
+
+Console.Write("Inserisci la prima parola: ");
+String parola1 = (Console.ReadLine());
+
+Console.Write("Inserisci la seconda parola: ");
+String parola2 = (Console.ReadLine());
+
+wordLength(parola1, parola2);
+
+void wordLength(string word1, string word2)
 {
-    int[] array = new int[10];
-
-    for (int j = 0; j < array.Length; j++)
+    if (word1.Length > word2.Length)
     {
-        array[j] = rnd.Next(1, 101);
+        Console.Write("La parola più lunga è " + word1);
+    }
+    else if (word1.Length < word2.Length)
+    {
+        Console.Write("La parola più lunga è " + word2);
+    }
+    else
+    {
+        Console.Write("Le parole hanno la stessa lunghezza");
     }
 
-    Console.WriteLine("Array {0}:\n{1}\n", i + 1, string.Join(", ", array));
 }
-
-
-
-
-
