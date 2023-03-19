@@ -166,9 +166,21 @@
 Console.Write("Inserisci un numero: ");
 int n = int.Parse(Console.ReadLine());
 
+Random rnd = new Random();
+
 for (int i = 0; i < n; i++)
 {
-    int[] myArray = new int[n];
-    Console.WriteLine(myArray[i]);
+    int[] array = new int[10];
+
+    for (int j = 0; j < array.Length; j++)
+    {
+        array[j] = rnd.Next(1, 101);
+    }
+
+    Console.WriteLine("Array {0}:\n{1}\n", i + 1, string.Join(", ", array));
 }
+
+
+
+
 
