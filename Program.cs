@@ -182,27 +182,52 @@
 
 //----------------------------------------------------------------
 
-Console.Write("Inserisci la prima parola: ");
-String parola1 = (Console.ReadLine());
+//Console.Write("Inserisci la prima parola: ");
+//String parola1 = (Console.ReadLine());
 
-Console.Write("Inserisci la seconda parola: ");
-String parola2 = (Console.ReadLine());
+//Console.Write("Inserisci la seconda parola: ");
+//String parola2 = (Console.ReadLine());
 
-wordLength(parola1, parola2);
+//wordLength(parola1, parola2);
 
-void wordLength(string word1, string word2)
+//void wordLength(string word1, string word2)
+//{
+//    if (word1.Length > word2.Length)
+//    {
+//        Console.Write("La parola più lunga è " + word1);
+//    }
+//    else if (word1.Length < word2.Length)
+//    {
+//        Console.Write("La parola più lunga è " + word2);
+//    }
+//    else
+//    {
+//        Console.Write("Le parole hanno la stessa lunghezza");
+//    }
+
+//}
+
+
+//----------------------------------------------------------------
+
+Console.Write("Inserisci un numero: ");
+int num = int.Parse(Console.ReadLine());
+
+oddOrEven(num);
+
+void oddOrEven(int number)
 {
-    if (word1.Length > word2.Length)
+    if (number % 2 == 0)
     {
-        Console.Write("La parola più lunga è " + word1);
+        Console.Write("Il numero inserito è pari");
     }
-    else if (word1.Length < word2.Length)
+    else if (number % 2 == 1)
     {
-        Console.Write("La parola più lunga è " + word2);
+        Console.Write("Il numero inserito è dispari");
     }
     else
     {
-        Console.Write("Le parole hanno la stessa lunghezza");
+        Console.Write("Il numero inserito non è valido");
     }
 
 }
